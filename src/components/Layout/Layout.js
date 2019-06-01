@@ -13,10 +13,16 @@ class Layout extends Component {
         this.setState({ showSideDrawer: false });
     }
 
+    sideFrawerToggleHandler = () => {
+        this.setState((prevState) => {
+            return {showSideDrawer: !prevState.showSideDrawer};
+        });
+    }
+
     render() {
         return (
             <Aux>
-                <Toolbar />
+                <Toolbar drawerToggleClicked={this.sideFrawerToggleHandler}/>
                 <SideDrawer
                     open={this.state.showSideDrawer}
                     closed={this.siderDrawerClosedHandler} />
