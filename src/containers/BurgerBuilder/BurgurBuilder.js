@@ -133,7 +133,7 @@ class BurgerBuilder extends Component {
                         ordered={this.purchaseHandler}
                     />
                 </Aux>);
-            let orderSummary = <OrderSummary
+            orderSummary = <OrderSummary
                 price={this.state.totalPrice}
                 ingredients={this.state.ingredients}
                 purchaseCancelled={this.purchaseCancelHandler}
