@@ -7,11 +7,13 @@ import Input from '../../../components/UI/Input/Input';
 
 class ContactData extends Component {
     state = {
-        name: '',
-        email: '',
-        address: {
-            streat: '',
-            postalcode: '',
+        orderForm: {
+            name: 'Max',
+            street: '506 Muller Pkwy',
+            zipCode: '47403',
+            country: 'U.S.',
+            email: 'max@text.com',
+            deliveryMethod: 'fastest'
         },
         loading: false
     }
@@ -24,16 +26,7 @@ class ContactData extends Component {
         const order = {
             ingredients: this.props.ingredients,
             price: this.props.price,
-            customer: {
-                name: 'Max',
-                address: {
-                    street: '506 Muller Pkwy',
-                    zipCode: '47403',
-                    country: 'U.S.'
-                },
-                emial: 'max@text.com'
-            },
-            deliveryMethod: 'fastest'
+            
         }
         axios.post('/orders.json', order).then(response => {
             this.setState({ loading: false});
