@@ -9,7 +9,7 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 
 import {connect} from 'react-redux';
-import * as actionTpye from '../../store/actions';
+import * as actionTpye from '../../store/actions/actionTypes';
 
 
 class BurgerBuilder extends Component {
